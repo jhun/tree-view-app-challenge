@@ -21,7 +21,7 @@ export const CompaniesAPI = {
         : undefined,
     });
 
-    return response.data;
+    return response;
   },
   getCompanyAssets: async function ({ companyId }, cancel = false) {
     const response = await api.request({
@@ -32,7 +32,7 @@ export const CompaniesAPI = {
         : undefined,
     });
 
-    return response.data;
+    return response;
   },
 };
 

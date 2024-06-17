@@ -1,11 +1,10 @@
-import React, { useContext, useState, createContext } from "react";
+import React, { useContext, useState, createContext, useEffect } from "react";
 
 const CompaniesContext = createContext();
 
 export default function CompaniesProvider({ children }) {
   const [companies, setCompanies] = useState([]);
-  const [currentCompanyLocations, setCurrentCompanyLocations] = useState([]);
-  const [currentCompanyAssets, setCurrentCompanyAssets] = useState([]);
+  useEffect(() => {}, [companies]);
 
   return (
     <CompaniesContext.Provider value={{ companies, setCompanies }}>

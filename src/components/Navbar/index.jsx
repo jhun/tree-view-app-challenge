@@ -40,7 +40,7 @@ const Navbar = () => {
                 <NavItem key={index}>
                   <NavLinks
                     to={`/companies/${company.id}`}
-                    className="nav__cta"
+                    className={`nav__cta ${company.selected ? "selected" : ""}`}
                   >
                     <NavIcon src={unitIcon} alt="Apex Unit" />
                     {company.name}

@@ -91,6 +91,10 @@ export const NavLinks = styled(NavLink)`
     transition: background-color 0.3s ease;
     padding: 0.25rem 1rem;
 
+    &.selected {
+      background-color: var(--tertiary-color);
+    }
+
     &:hover {
       background-color: var(--tertiary-color);
     }
