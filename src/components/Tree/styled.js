@@ -6,14 +6,36 @@ export const TreeContainer = styled.div`
   border: 1px solid #ccc;
   border-top: none;
   border-radius: 3px;
+  @media screen and (max-width: 1150px) {
+    width: 100%;
+  }
 `;
 
 export const TreeListSearch = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 50px;
   border: 1px solid #cccccc;
   border-left: none;
   border-right: none;
+
+  input[type="text"] {
+    width: 90%;
+    height: 100%;
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
 `;
 
 export const TreeListContainer = styled.ul`
