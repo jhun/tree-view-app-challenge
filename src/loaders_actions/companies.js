@@ -42,6 +42,7 @@ export const companyLoader = async ({ params }) => {
     (result[obj.sensorType] = result[obj.sensorType] || []).push(obj);
     return result;
   }, {});
+
   const assetsArray = assetsClassification.null;
   delete assetsClassification.null;
   const componentsArray = [].concat(...Object.values(assetsClassification));
@@ -50,6 +51,7 @@ export const companyLoader = async ({ params }) => {
     if (asset.children === undefined) {
       asset.children = [];
     }
+    asset.isAsset = true;
     componentsArray.map((component) => {
       if (component.parentId === asset.id) {
         asset.children.push(component);
@@ -58,6 +60,7 @@ export const companyLoader = async ({ params }) => {
   });
 
   companyLocation.map((loc) => {
+    loc.isLocation = true;
     if (loc.children === undefined) {
       loc.children = [];
     }

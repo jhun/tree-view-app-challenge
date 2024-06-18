@@ -6,10 +6,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: calc(
-    100vh -
-      (var(--header-height) + var(--header-paddingY) + var(--header-paddingY))
-  );
+  height: auto;
 
   @media screen and (min-width: 1150px) {
     height: calc(
@@ -32,5 +29,13 @@ export const Box = styled.div`
   border-radius: 5px;
   background-color: #fff;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: space-between;
+
+  @media screen and (max-width: 1150px) {
+    width: 90%;
+    height: auto;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+  }
 `;

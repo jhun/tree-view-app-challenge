@@ -57,7 +57,7 @@ export const NavList = styled.ul`
   }
   @media screen and (min-width: 1150px) {
     flex-direction: row;
-    column-gap: 2.5rem;
+    column-gap: 15px;
   }
 `;
 
@@ -67,7 +67,7 @@ export const NavLinkLogo = styled(NavLink)`
   color: var(--primary-color);
   transition: color 0.4s;
   font-size: var(--h2-font-size);
-  font-family: var(--second-font);
+  font-family: var(--body-font);
 `;
 
 export const NavLinks = styled(NavLink)`
